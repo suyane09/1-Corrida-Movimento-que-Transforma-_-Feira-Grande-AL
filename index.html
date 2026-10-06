@@ -97,7 +97,7 @@ footer{text-align:center;padding:32px 20px 48px;color:var(--muted);font-size:.9r
       <div><b id="cm">--</b><span>minutos</span></div>
       <div><b id="cs">--</b><span>segundos</span></div>
     </div>
-    <a class="btn" href="#inscricoes">Quero me inscrever</a>
+    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScza-h5_od9hgmxFJqt-E_VuCFQCfl_TlujAhZG9S_jKZvL6w/viewform" target="_blank" rel="noopener">Quero me inscrever</a>
   </div>
 </header>
 
@@ -124,49 +124,10 @@ footer{text-align:center;padding:32px 20px 48px;color:var(--muted);font-size:.9r
   <section id="inscricoes">
     <h2>Inscrições</h2>
     <div class="price">
-      <div><span class="v gold">R$ 50,00</span><small>pagamento via Pix</small></div>
+      <div><span class="v gold">R$ 50,00</span><small>pagamento via Pix · 200 vagas · até 20/11</small></div>
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScza-h5_od9hgmxFJqt-E_VuCFQCfl_TlujAhZG9S_jKZvL6w/viewform" target="_blank" rel="noopener">Inscrever-se agora</a>
     </div>
-    <div class="vagas"><span id="vtxt"></span><div class="bar"><i id="vbar"></i></div></div>
-    <div id="closed" class="closed hide">Inscrições encerradas: as 200 vagas foram preenchidas.</div>
-
-    <div id="flow">
-      <form id="f1" novalidate>
-        <div class="row">
-          <label>Nome completo<input id="nome" autocomplete="name" required></label>
-          <label>CPF<input id="cpf" inputmode="numeric" maxlength="14" placeholder="000.000.000-00" required></label>
-          <label>Data de nascimento<input id="nasc" type="date" required></label>
-          <label>Sexo<select id="sexo" required><option value="">Selecione</option><option>Masculino</option><option>Feminino</option></select></label>
-          <label>Percurso<select id="perc" required><option value="">Selecione</option><option>5 km</option><option>2,5 km</option></select></label>
-          <label>WhatsApp<input id="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="(82) 90000-0000" required></label>
-          <label>E-mail<input id="email" type="email" autocomplete="email" required></label>
-          <label>Cidade<input id="cid" autocomplete="address-level2" required></label>
-        </div>
-        <p class="err" id="e1" role="alert"></p>
-        <button class="btn" type="submit">Continuar para o pagamento</button>
-      </form>
-
-      <div class="step hide" id="f2">
-        <h3 style="margin:0 0 8px">Pague R$ 50,00 via Pix</h3>
-        <p id="pixwarn" class="err hide">A chave Pix ainda não foi configurada pela organização.</p>
-        <div id="pixbox">
-          <div class="qr"><div id="qr"></div></div>
-          <p class="pixcode">Pix copia e cola:<br><input id="code" readonly></p>
-          <button class="btn alt" type="button" id="copy">Copiar código Pix</button>
-        </div>
-        <p style="margin-top:16px"><label style="display:flex;gap:10px;align-items:center;color:var(--text)"><input id="paid" type="checkbox" style="width:auto;margin:0"> Já fiz o pagamento</label></p>
-        <p class="err" id="e2" role="alert"></p>
-        <button class="btn alt" type="button" id="back1">Voltar</button>
-        <button class="btn" type="button" id="go3">Conferir dados</button>
-      </div>
-
-      <div class="step hide" id="f3">
-        <h3 style="margin:0 0 12px">Confira seus dados</h3>
-        <dl class="sum" id="sum"></dl>
-        <p>Ao enviar, o WhatsApp da organização abre com todos os dados prontos. <strong>Anexe o comprovante do Pix na conversa</strong> para concluir a inscrição.</p>
-        <button class="btn alt" type="button" id="back2">Corrigir</button>
-        <a class="btn" id="send" href="#" target="_blank" rel="noopener">Enviar pelo WhatsApp</a>
-      </div>
-    </div>
+    <p style="margin-top:16px">Preencha o formulário de inscrição, faça o pagamento via Pix e envie o comprovante para o WhatsApp <strong>(82) 98207-1438</strong>. As inscrições vão até <strong>20 de novembro</strong> ou até as 200 vagas serem preenchidas, o que acontecer primeiro.</p>
   </section>
 
   <section>
@@ -188,7 +149,7 @@ footer{text-align:center;padding:32px 20px 48px;color:var(--muted);font-size:.9r
 
   <section>
     <h2>Entrega dos kits</h2>
-    <p><strong>Local e data:</strong> [informar]</p>
+    <p><strong>Local:</strong> CT Prime<br><strong>Prazo:</strong> até 20/11/2026</p>
     <ul>
       <li>Não haverá entrega de kit no dia do evento.</li>
       <li>O kit só pode ser retirado pelo(a) atleta inscrito(a), com comprovante de inscrição e documento com foto.</li>
@@ -225,50 +186,7 @@ footer{text-align:center;padding:32px 20px 48px;color:var(--muted);font-size:.9r
     <p>Sítio Taboca<br>Feira Grande – AL</p>
     <a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=Taboca%2C+Feira+Grande%2C+AL" target="_blank" rel="noopener">Abrir no Google Maps</a>
   </section>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-  <script>
-  (function(){
-    /* CONFIGURAÇÃO DA ORGANIZAÇÃO */
-    var CFG={total:200,ocupadas:0,pixKey:'13538849455',pixNome:'CORRIDA FEIRA GRANDE',pixCidade:'FEIRA GRANDE',whats:'5582982071438',valor:'50.00'};
-    var $=function(i){return document.getElementById(i)};
-    var left=Math.max(0,CFG.total-CFG.ocupadas);
-    $('vtxt').textContent=left>0?left+' de '+CFG.total+' vagas disponíveis':'Vagas esgotadas';
-    $('vbar').style.width=Math.min(100,CFG.ocupadas/CFG.total*100)+'%';
-    if(left<=0){$('flow').classList.add('hide');$('closed').classList.remove('hide')}
-    function show(n){['f1','f2','f3'].forEach(function(k){var e=$(k);k==='f'+n?e.classList.remove('hide'):e.classList.add('hide')});$('f'+n).scrollIntoView({block:'start'})}
-    function ascii(s,m){return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().slice(0,m)}
-    function f(id,v){return id+String(v.length).padStart(2,'0')+v}
-    function crc(s){var c=0xFFFF,i,j;for(i=0;i<s.length;i++){c^=s.charCodeAt(i)<<8;for(j=0;j<8;j++)c=c&0x8000?((c<<1)^0x1021)&0xFFFF:(c<<1)&0xFFFF}return c.toString(16).toUpperCase().padStart(4,'0')}
-    function pix(){var p='000201010211'+f('26',f('00','br.gov.bcb.pix')+f('01',CFG.pixKey))+'52040000'+'5303986'+f('54',CFG.valor)+'5802BR'+f('59',ascii(CFG.pixNome||'INSCRICAO',25))+f('60',ascii(CFG.pixCidade,15))+f('62',f('05','***'))+'6304';return p+crc(p)}
-    var cpf=$('cpf');cpf.addEventListener('input',function(){var d=cpf.value.replace(/\D/g,'').slice(0,11);cpf.value=d.replace(/(\d{3})(\d)/,'$1.$2').replace(/(\d{3})(\d)/,'$1.$2').replace(/(\d{3})(\d{1,2})$/,'$1-$2')});
-    var ids=['nome','cpf','nasc','sexo','perc','tel','email','cid'],lab={nome:'Nome',cpf:'CPF',nasc:'Nascimento',sexo:'Sexo',perc:'Percurso',tel:'WhatsApp',email:'E-mail',cid:'Cidade'};
-    function val(i){return $(i).value.trim()}
-    function br(d){var a=d.split('-');return a.length===3?a[2]+'/'+a[1]+'/'+a[0]:d}
-    $('f1').addEventListener('submit',function(e){
-      e.preventDefault();var miss=ids.filter(function(i){return !val(i)});
-      if(miss.length){$('e1').textContent='Preencha todos os campos.';$(miss[0]).focus();return}
-      if(val('cpf').replace(/\D/g,'').length!==11){$('e1').textContent='CPF incompleto.';$('cpf').focus();return}
-      if(!/^\S+@\S+\.\S+$/.test(val('email'))){$('e1').textContent='E-mail inválido.';$('email').focus();return}
-      $('e1').textContent='';
-      var ok=!!CFG.pixKey;$('pixwarn').classList.toggle('hide',ok);$('pixbox').classList.toggle('hide',!ok);
-      if(ok){var c=pix();$('code').value=c;$('qr').innerHTML='';try{new QRCode($('qr'),{text:c,width:200,height:200,correctLevel:QRCode.CorrectLevel.M})}catch(x){}}
-      show(2);
-    });
-    $('copy').addEventListener('click',function(){var i=$('code');i.select();try{navigator.clipboard.writeText(i.value).catch(function(){document.execCommand('copy')})}catch(x){try{document.execCommand('copy')}catch(y){}}this.textContent='Código copiado'});
-    $('back1').addEventListener('click',function(){show(1)});
-    $('back2').addEventListener('click',function(){show(2)});
-    $('go3').addEventListener('click',function(){
-      if(!$('paid').checked){$('e2').textContent='Faça o pagamento e marque a confirmação para continuar.';return}
-      $('e2').textContent='';var s=$('sum');s.innerHTML='';
-      ids.forEach(function(i){var t=document.createElement('dt'),d=document.createElement('dd');t.textContent=lab[i];d.textContent=i==='nasc'?br(val(i)):val(i);s.appendChild(t);s.appendChild(d)});
-      var m='*Inscrição – 1ª Corrida Movimento que Transforma*%0A22/11/2026 – Feira Grande/AL%0A%0A'+ids.map(function(i){return '*'+lab[i]+':* '+encodeURIComponent(i==='nasc'?br(val(i)):val(i))}).join('%0A')+'%0A*Valor:* R$ 50,00 (Pix)%0A%0AVou enviar o comprovante em seguida.';
-      $('send').href=CFG.whats?'https://wa.me/'+CFG.whats+'?text='+m:'#';
-      $('send').onclick=function(e){if(!CFG.whats){e.preventDefault();alert('O número de WhatsApp da organização ainda não foi configurado.')}};
-      show(3);
-    });
-  })();
-  </script>
-  <script>
+    <script>
   (function(){
     var alvo=new Date('2026-11-22T06:00:00-03:00').getTime();
     function pad(n){return n<10?'0'+n:''+n}
